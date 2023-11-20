@@ -16,9 +16,11 @@ const ButtonPhone: React.FC<ButtonPhoneProps> = ({ value = '0631420045', bgColor
     };
 
     return (
-        <a href={`tel:${value}`} className={`py-3 px-5 rounded-lg bg-${bgColor} text-${textColor} flex`} style={buttonStyles}>
-            <PhoneIcon className="h-5 w-5 inline-block mr-2" />
-            {value}
+        <a href={`tel:${value}`} className={`py-3 lg:px-5 px-3 rounded-full lg:rounded-lg bg-${bgColor} text-${textColor} flex`} style={buttonStyles}>
+            <PhoneIcon className="h-5 w-5 inline-block lg:mr-2" />
+            <div className='lg:flex hidden'>
+                {value}
+            </div>
         </a>
     );
 };
