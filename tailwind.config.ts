@@ -13,7 +13,7 @@ const config: Config = {
       white: "#FFFFFF",
       orange:"#BF522A",
       yellow: "#F2B138",
-      gray: "gray"
+      gray: "#F4F4F4"
     },
   },
   plugins: [],
