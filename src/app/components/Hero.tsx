@@ -25,8 +25,8 @@ const Hero = () => {
     }
 
     return (
-        <section className='mt-5'>
-            <div className='mx-auto flex max-w-7xl p-6 lg:px-8 md:flex-row flex-col justify-between items-center'>
+        <section >
+            <div className='mx-auto flex max-w-7xl px-6 lg:py-32 py-20 lg:px-8 md:flex-row flex-col justify-between items-center'>
                 <div className='md:w-6/12 w-full'>
                     <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver <span className="underline-yellow">vos chantiers</span></h1>
                     <p className='text-text text-xl mt-10 font-semibold'>Augmenter votre de CA mensuel de </p>
