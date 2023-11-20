@@ -13,8 +13,8 @@ const ImgWithText: React.FC<ImgWithTextProps> = ({
   paragraphs,
 }) => {
   return (
-    <section className="">
-      <div className="mx-auto flex max-w-7xl p-6 lg:px-8 lg:py-32 py-20 md:flex-row flex-col justify-between items-center bg-textSecondary">
+    <section className=" bg-textSecondary">
+      <div className="mx-auto flex max-w-7xl p-6 lg:px-8 lg:py-32 py-20 md:flex-row flex-col justify-between items-center">
         <div className="md:w-6/12 w-full flex justify-center items-center">
           <img src={imgUrl} className="max-h-[500px] h-auto" alt="Image Description" />
         </div>
