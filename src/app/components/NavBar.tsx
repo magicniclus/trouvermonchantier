@@ -17,7 +17,7 @@ const NavBar = () => {
                         <img className="h-12 w-auto" src="/logo/logo.png" alt="trouver-mon-chantier" />
                     </a>
                 </div>
-                <div>
+                <div className='md:block hidden'>
                     {navigation.map((item) => (
                         <a href={item.href} className='mr-7'>{item.name}</a>    
                     ))
