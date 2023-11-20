@@ -11,3 +11,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.underline-yellow {
+  text-decoration: underline;
+  text-decoration-color: #F2B138;
+  text-decoration-thickness: 7px;
+}
