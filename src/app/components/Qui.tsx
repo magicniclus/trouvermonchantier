@@ -37,7 +37,7 @@ const Qui: React.FC = () => {
                     <p>Expert en marketing digital et communication en ligne, basé à Bordeaux. Fort de plus de 10 ans d'expérience, je me spécialise dans les campagnes Google Ads et la création de landing pages sur-mesure pour les professionnels du bâtiment. Mon approche est centrée sur l'acquisition de prospects qualifiés et l'optimisation des campagnes pour une efficacité maximale. Je m'adapte aux besoins spécifiques de chaque client, offrant une flexibilité budgétaire et une transparence totale. Mon objectif est d'accroître significativement le chiffre d'affaires de mes clients dans le bâtiment, en garantissant des résultats concrets et un taux de conversion élevé, le tout sans engagement ni frais de service.</p>
                 </div>
                 <div className="md:w-6/12 w-full flex justify-center items-center md:mt-0 mt-12">
-                    <img src="/img/moi2.png" className="max-h-[500px] h-auto" alt="Image Description" />
+                    <img src="/img/moi2.png" className="max-h-[500px] h-auto max-w-[300px]" alt="Image Description" />
                 </div>
             </div>
             <div className="mx-auto flex max-w-5xl p-6 lg:px-8 lg:pb-32 pb-20 md:flex-row flex-col justify-between items-center bg-white mt-16">
