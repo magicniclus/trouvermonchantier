@@ -26,7 +26,7 @@ export default function Home() {
                     trigger: formRef.current,
                     start: "bottom 30%",     
                     end: "top 80%",
-                    toggleActions: "play none none reverse",// Ajuster selon les besoins
+                    toggleActions: "play none none reverse",
                 }
             });
 
