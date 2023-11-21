@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import ButtonForm from './ButtonForm';
 import { addProspect } from '../firebase/dataManager';
 import { useRouter } from 'next/navigation'
