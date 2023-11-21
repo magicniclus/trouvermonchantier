@@ -1,12 +1,9 @@
 "use client"
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from './Input';
-import Select from './Select';
 import ButtonForm from './ButtonForm';
 import { addProspect } from '../firebase/dataManager';
 import { useRouter } from 'next/navigation'
-
-const options = ['Option 1', 'Option 2', 'Option 3'];
 
 const Hero = () => {
   const router = useRouter();
@@ -65,7 +62,6 @@ const handleChange = (name: keyof typeof value) => (newValue: string) => {
                             <Input type="text" placeholder="Nom d'entreprise" onChange={handleChange('nomEntreprise')} className="mt-4 w-[100%]" />
                             <Input type="text" placeholder="Code postal" onChange={handleChange('codePostal')} className="mt-4 w-[100%]" />
                             <Input type="text" placeholder="Métier principal" onChange={handleChange('metierPrincipal')} className="mt-4 w-[100%]" />
-                            {/* <Select options={options} value={value.metierPrincipal} onChange={handleChange('metierPrincipal')} placeholder="Sélectionnez une option" className='mt-4 w-[100%]' /> */}
                             <div className='flex justify-center'>
                                 <ButtonForm disabled={disabled} />
                             </div>
