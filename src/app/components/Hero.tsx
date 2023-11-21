@@ -1,13 +1,12 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Input from './Input';
 import ButtonForm from './ButtonForm';
 import { addProspect } from '../firebase/dataManager';
 import { useRouter } from 'next/navigation'
 
 const Hero = () => {
-  const router = useRouter();
-    const [disabled, setDisabled] = useState(true)
+    const router = useRouter();
+    const [disabled, setDisabled] = useState(true);
     const [value, setValue] = useState({
         name: '',
         email: '',
@@ -15,29 +14,20 @@ const Hero = () => {
         codePostal: '',
         nomEntreprise: "",
         metierPrincipal:""
-    })
+    });
 
     useEffect(() => {
-        if (value.name !== '' && value.email !== '' && value.tel !== '' && value.codePostal !== '' && value.nomEntreprise !== '' && value.metierPrincipal !== '') {
-            setDisabled(false)
-        } else {
-            setDisabled(true)
-        }
-    }, [value])
+        setDisabled(!(value.name && value.email && value.tel && value.codePostal && value.nomEntreprise && value.metierPrincipal));
+    }, [value]);
 
-const handleChange = (name: keyof typeof value) => (newValue: string) => {
-    console.log("Updated value for", name, ":", newValue); // Pour déboguer
-    setValue({ ...value, [name]: newValue });
-};
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        addProspect(value).then(()=>{
-            router.push("/merci")
-        }).catch((error)=>{
-            console.log(error)
-        })
-    }
+        addProspect(value).then(() => {
+            router.push("/merci");
+        }).catch((error: any) => {
+            console.log(error);
+        });
+    };
 
     return (
         <section >
@@ -54,14 +44,56 @@ const handleChange = (name: keyof typeof value) => (newValue: string) => {
                         <h2 className='text-center text-text text-xl font-semibold'>Vous êtes professionel du bâtiment et vous recherchez de nouveaux chantiers ?</h2>
                         <p className='text-center text-xs mt-5'>Saisisez vos coordonnées et je vous contacterais afin que nous étudions votre projet</p>
                         <div className='md:w-9/12 mx-auto mt-8'>
-                            <Input type="text" placeholder="Nom, prénom" onChange={handleChange('name')} />
+                            <input 
+                            type="text" 
+                            name="fullname"
+                            placeholder="Nom, prénom" 
+                            value={value.name} 
+                            onChange={(e) => setValue({ ...value, name: e.target.value })} 
+                            className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
+                        />
                             <div className='flex justify-between w-[100%] mt-4'>
-                                <Input type="email" placeholder="Email" onChange={handleChange('email')} className='w-[48%]' />
-                                <Input type="tel" placeholder="Téléphone" onChange={handleChange('tel')} className='w-[48%]' />
+                                <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
+                            value={value.email} 
+                            onChange={(e) => setValue({ ...value, email: e.target.value })} 
+                            className='px-4 py-2 rounded-md mt-4 w-[48%]'
+                        />
+                        <input 
+                            type="tel" 
+                            name="tel" 
+                            placeholder="Téléphone" 
+                            value={value.tel} 
+                            onChange={(e) => setValue({ ...value, tel: e.target.value })} 
+                            className='px-4 py-2 rounded-md mt-4 w-[48%]'
+                        />
                             </div>
-                            <Input type="text" placeholder="Nom d'entreprise" onChange={handleChange('nomEntreprise')} className="mt-4 w-[100%]" />
-                            <Input type="text" placeholder="Code postal" onChange={handleChange('codePostal')} className="mt-4 w-[100%]" />
-                            <Input type="text" placeholder="Métier principal" onChange={handleChange('metierPrincipal')} className="mt-4 w-[100%]" />
+                            <input 
+                            type="text" 
+                            name="nomEntreprise" 
+                            placeholder="Nom d'entreprise" 
+                            value={value.nomEntreprise} 
+                            onChange={(e) => setValue({ ...value, nomEntreprise: e.target.value })} 
+                            className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
+                        />
+                        <input 
+                            type="text" 
+                            name="codePostal" 
+                            placeholder="Code postal" 
+                            value={value.codePostal} 
+                            onChange={(e) => setValue({ ...value, codePostal: e.target.value })} 
+                            className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
+                        />
+                        <input 
+                            type="text" 
+                            name="metierPrincipal" 
+                            placeholder="Métier principal" 
+                            value={value.metierPrincipal} 
+                            onChange={(e) => setValue({ ...value, metierPrincipal: e.target.value })} 
+                            className={`px-4 py-2 rounded-md mt-4 w-[100%]`}
+                        />
                             <div className='flex justify-center'>
                                 <ButtonForm disabled={disabled} />
                             </div>
