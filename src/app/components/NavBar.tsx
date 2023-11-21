@@ -18,8 +18,8 @@ const NavBar = () => {
                     </a>
                 </div>
                 <div className='md:block hidden'>
-                    {navigation.map((item) => (
-                        <a href={item.href} className='mr-7'>{item.name}</a>    
+                    {navigation.map((item, id) => (
+                        <a href={item.href} key={id} className='mr-7'>{item.name}</a>    
                     ))
                     }
                 </div>
