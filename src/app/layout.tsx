@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <meta charSet="utf-8" />
         <link rel="icon" href="logo/favicon.png" sizes="any" />
         <script dangerouslySetInnerHTML={{__html:`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
