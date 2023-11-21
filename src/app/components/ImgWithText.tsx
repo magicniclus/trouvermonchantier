@@ -20,7 +20,7 @@ const ImgWithText: React.FC<ImgWithTextProps> = ({
         </div>
         <div className="md:w-6/12 w-full md:mt-0 mt-12 text-white">
           <h2 className="text-2xl font-bold">{title}</h2>
-          <div className="mt-7">
+          <div className="mt-7 mb-14">
             <Ligne />
           </div>
           {paragraphs.map((paragraph, index) => (
