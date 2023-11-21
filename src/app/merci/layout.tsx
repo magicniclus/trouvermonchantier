@@ -5,8 +5,8 @@ import './../globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Trouver des Chantiers - Augmentez Votre CA | Trouver-Mon-Chantier.fr',
-  description: "Boostez votre CA avec Trouver-Mon-Chantier.fr. Solutions sur-mesure pour professionnels du bâtiment. Sans engagement ni frais cachés.",
+  title: 'Merci | Trouver-Mon-Chantier.fr',
+  description: "Merci de votre confiance",
 }
 
 export default function RootLayout({
