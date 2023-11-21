@@ -28,9 +28,9 @@ const Hero = () => {
         <section >
             <div className='mx-auto flex max-w-5xl px-6 lg:pb-32 pb-20 pt-14 lg:px-8 md:flex-row flex-col justify-between items-center'>
                 <div className='md:w-5/12 w-full'>
-                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver <span className="underline-yellow">vos chantiers</span></h1>
+                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'><span className="underline-yellow">Trouver des Chantiers</span></h1>
                     <p className='text-text text-xl mt-10 font-semibold'>Augmenter votre de CA mensuel de </p>
-                    <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-2xl text-yellow'>à</span><br/> 400 000€</h2>
+                    <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-2xl text-textSecondary'>à</span><br/> 400 000€</h2>
                     <p className='text-text text-xl font-semibold mt-2'>Efficace, fiable et continu</p>
                     <p className='mt-10'>Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. </p>
                 </div>
