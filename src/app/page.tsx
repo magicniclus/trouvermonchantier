@@ -39,6 +39,8 @@ export default function Home() {
                     ease: "power1.out",
                 }
             );
+          
+
         }
     }, [formRef, testimonialRef, buttonRef]);
   
