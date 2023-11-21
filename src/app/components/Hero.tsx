@@ -1,13 +1,14 @@
 "use client"
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Input from './Input';
 import Select from './Select';
-import ButtonPhone from './ButtonAction';
+import ButtonForm from './ButtonForm';
+import { addProspect } from '../firebase/dataManager';
 
 const options = ['Option 1', 'Option 2', 'Option 3'];
 
 const Hero = () => {
-
+    const [disabled, setDisabled] = useState(true)
     const [value, setValue] = useState({
         name: '',
         email: '',
@@ -17,12 +18,21 @@ const Hero = () => {
         metierPrincipal:""
     })
 
+    useEffect(() => {
+        if (value.name !== '' && value.email !== '' && value.tel !== '' && value.codePostal !== '' && value.nomEntreprise !== '' && value.metierPrincipal !== '') {
+            setDisabled(false)
+        } else {
+            setDisabled(true)
+        }
+    }, [value])
+
    const handleChange = (name: keyof typeof value) => (newValue: string) => {
         setValue({ ...value, [name]: newValue });
     };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        addProspect(value)
     }
 
     return (
@@ -47,9 +57,9 @@ const Hero = () => {
                             </div>
                             <Input type="name" placeholder="Nom d'entreprise" onChange={handleChange('nomEntreprise')} className="mt-4 w-[100%]"  />
                             <Input type="zipCode" placeholder="Code postal" onChange={handleChange('codePostal')} className="mt-4 w-[100%]"  />
-                            <Select options={options} value={value.name} onChange={handleChange('metierPrincipal')} placeholder="Sélectionnez une option" className='mt-4 w-[100%]' />
+                            <Select options={options} value={value.metierPrincipal} onChange={handleChange('metierPrincipal')} placeholder="Sélectionnez une option" className='mt-4 w-[100%]' />
                             <div className='flex justify-center'>
-                                <ButtonPhone />
+                                <ButtonForm disabled={disabled} />
                             </div>
                         </div>
                         <div className='flex w-[100%] mt-5 justify-center text-xs'>
