@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Input from './Input';
 import Select from './Select';
 import ButtonPhone from './ButtonAction';
@@ -7,6 +7,7 @@ import ButtonPhone from './ButtonAction';
 const options = ['Option 1', 'Option 2', 'Option 3'];
 
 const Hero = () => {
+
     const [value, setValue] = useState({
         name: '',
         email: '',
@@ -28,7 +29,7 @@ const Hero = () => {
         <section >
             <div className='mx-auto flex max-w-5xl px-6 lg:pb-32 pb-20 pt-14 lg:px-8 md:flex-row flex-col justify-between items-center'>
                 <div className='md:w-5/12 w-full'>
-                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver<span className="underline-yellow"> des Chantiers</span></h1>
+                    <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver <span className="underline-yellow">des Chantiers</span></h1>
                     <p className='text-text text-xl mt-10 font-semibold'>Augmenter votre de CA mensuel de </p>
                     <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-2xl text-textSecondary'>à</span><br/> 400 000€</h2>
                     <p className='text-text text-xl font-semibold mt-2'>Efficace, fiable et continu</p>
