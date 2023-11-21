@@ -39,26 +39,6 @@ export default function Home() {
                     ease: "power1.out",
                 }
             );
-            
-            const tl2 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: testimonialRef.current,
-                    start: "top 80%",     
-                    end: "bottom 30%",
-                    toggleActions: "play none none reverse",// Ajuster selon les besoins
-                }
-            });
-
-            tl2.fromTo(
-                buttonRef.current,
-                { opacity: 1 },
-                {
-                    duration: 0.2,
-                    opacity: 0,
-                    ease: "power1.out",
-                }
-            );
-
         }
     }, [formRef, testimonialRef, buttonRef]);
   
