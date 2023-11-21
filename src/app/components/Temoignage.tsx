@@ -1,5 +1,6 @@
+"use client"
 import { StarIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import React, { useRef } from 'react';
 import ButtonPhone from './ButtonAction';
 
 const cards = [
@@ -21,6 +22,9 @@ const cards = [
 ]
 
 const Temoignage = () => {
+
+    const temoignage = useRef<HTMLFormElement>(null);
+
     return (
         <section className='bg-textSecondary'>
             <div className="mx-auto flex max-w-5xl p-6 lg:px-8 lg:py-32 py-20 flex-col justify-between items-center text-white">
