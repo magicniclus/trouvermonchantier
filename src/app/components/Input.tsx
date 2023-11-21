@@ -1,33 +1,36 @@
 import React, { ChangeEvent, useState } from 'react';
 
 interface InputProps {
-    type: 'email' | 'text' | 'tel' | 'name' | 'zipCode';
+    type: 'email' | 'text' | 'tel' ;
     placeholder?: string;
     onChange: (value: string) => void;
-    className?: string; // Prop pour la largeur
+    className?: string; 
 }
 
-const Input: React.FC<InputProps> = ({ type = "name", placeholder = "name", onChange, className = "w-full", zipCode }) => {
-    const [value, setValue] = useState('');
+const Input: React.FC<InputProps> = ({ type = "text", placeholder = "", onChange, className = "w-full" }) => {
+    const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value;
 
         if (validateInput(type, newValue)) {
-            setValue(newValue);
+            setInputValue(newValue);
             onChange(newValue);
+        } else if (newValue === '') {
+            // Gérer le cas où l'utilisateur efface l'entrée
+            setInputValue('');
+            onChange('');
         }
     };
 
-    // Style dynamique pour la largeur
     const inputStyle = {
         width: className ? className : '',
     };
 
     return (
         <input
-            type={type === 'name' ? 'text' : type} // Utiliser 'text' pour les noms et prénoms
-            value={value}
+            type={type} // Utiliser 'text' pour les types 'name' et 'zipCode'
+            value={inputValue}
             placeholder={placeholder}
             onChange={handleChange}
             className={`px-4 py-2 rounded-md ${className}`}
@@ -38,10 +41,10 @@ const Input: React.FC<InputProps> = ({ type = "name", placeholder = "name", onCh
 
 function validateInput(type: string, value: string): boolean {
     switch (type) {
-        case 'email':
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || value === '';
+         case 'email':
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
         case 'tel':
-            return /^\+?\d{0,15}$/.test(value) || value === '';
+            return /^\+?\d{0,15}$/.test(value);
         case 'name':
             return /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ -][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/.test(value) && value.length >= 2 || value === '';
         case 'zipCode':
