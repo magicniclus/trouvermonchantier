@@ -49,15 +49,23 @@ export default function Footer() {
       </h2>
       <div className="mx-auto max-w-5xl px-6 pb-8  lg:px-8">
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
-          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+          <p className="mt-8 text-xs leading-5 text-gray-400 md:mt-0">
             &copy; 2023 trouver-mon-chantier.com, Inc. Tous droit réservé.
           </p>
+          <div className="flex">
           <a
-            className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0"
+            className="mt-8 text-xs leading-5 text-gray-400 md:mt-0"
             href="/mentions-legales"
           >
             Mentions légales
           </a>
+          <a
+            className="mt-8 text-xs leading-5 text-gray-400 md:mt-0 ml-5 flex-wrap"
+            href="/politique-de-confidentialite"
+          >
+            Politique de confidentialité
+          </a>
+          </div>
         </div>
       </div>
     </footer>
