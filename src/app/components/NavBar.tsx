@@ -3,8 +3,8 @@ import ButtonPhone from './ButtonPhone';
 
 const navigation = [
   { name: 'Qui suis-je ?', href: '#qui' },
-  { name: 'blog', href: '#' },
-  { name: 'Contact', href: '#' },
+//   { name: 'blog', href: '#' },
+  { name: 'Contact', href: '#form' },
 ]
 
 const NavBar = () => {
