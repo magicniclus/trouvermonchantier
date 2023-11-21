@@ -4,10 +4,12 @@ import Input from './Input';
 import Select from './Select';
 import ButtonForm from './ButtonForm';
 import { addProspect } from '../firebase/dataManager';
+import { useRouter } from 'next/navigation'
 
 const options = ['Option 1', 'Option 2', 'Option 3'];
 
 const Hero = () => {
+  const router = useRouter();
     const [disabled, setDisabled] = useState(true)
     const [value, setValue] = useState({
         name: '',
@@ -32,7 +34,11 @@ const Hero = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        addProspect(value)
+        addProspect(value).then(()=>{
+            router.push("/merci")
+        }).catch((error)=>{
+            console.log(error)
+        })
     }
 
     return (
