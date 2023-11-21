@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Trouver des Chantiers - Augmentez Votre CA avec Nos Solutions Sur-Mesure',
-  description: "Découvrez comment accroître votre chiffre d'affaires en trouvant des chantiers qualifiés. Solutions personnalisées pour les professionnels du bâtiment, sans engagement ni frais de service. Contactez-nous pour booster votre activité dès aujourd'hui !",
+  title: 'Trouver des Chantiers - Augmentez Votre CA | Trouver-Mon-Chantier.fr',
+  description: "Boostez votre CA avec Trouver-Mon-Chantier.fr. Solutions sur-mesure pour professionnels du bâtiment. Sans engagement ni frais cachés.",
 }
 
 export default function RootLayout({
@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
+      <head>
+        <link rel="icon" href="logo/favicon.png" sizes="any" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
