@@ -14,7 +14,7 @@ const NavBar = () => {
                 <div className="flex">
                     <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Trouver-mon-chantier</span>
-                        <img className="h-12 w-auto" src="/logo/logo.png" alt="trouver-mon-chantier" />
+                        <img className="h-14 w-auto" src="/logo/logo.png" alt="trouver-mon-chantier" />
                     </a>
                 </div>
                 <div className='md:block hidden'>
