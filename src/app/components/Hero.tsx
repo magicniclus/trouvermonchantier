@@ -52,9 +52,9 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='flex w-[100%] mt-5 justify-center text-xs'>
-                            <a className='underline'>Conditions générales </a>
+                            <a href="/conditions-generales" className='underline'>Conditions générales </a>
                             <p className='mx-1.5'>et </p>
-                            <a className='underline'>politique de confidentialité.</a>
+                            <a href="/politique-de-confidentialite" className='underline'>politique de confidentialité.</a>
                         </div>
                     </form>
                 </div>
