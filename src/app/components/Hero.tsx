@@ -28,9 +28,10 @@ const Hero = () => {
         }
     }, [value])
 
-   const handleChange = (name: keyof typeof value) => (newValue: string) => {
-        setValue({ ...value, [name]: newValue });
-    };
+const handleChange = (name: keyof typeof value) => (newValue: string) => {
+    console.log("Updated value for", name, ":", newValue); // Pour déboguer
+    setValue({ ...value, [name]: newValue });
+};
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -56,14 +57,15 @@ const Hero = () => {
                         <h2 className='text-center text-text text-xl font-semibold'>Vous êtes professionel du bâtiment et vous recherchez de nouveaux chantiers ?</h2>
                         <p className='text-center text-xs mt-5'>Saisisez vos coordonnées et je vous contacterais afin que nous étudions votre projet</p>
                         <div className='md:w-9/12 mx-auto mt-8'>
-                            <Input type="name" placeholder="Nom, prénom" onChange={handleChange('name')}  />
+                            <Input type="text" placeholder="Nom, prénom" onChange={handleChange('name')} />
                             <div className='flex justify-between w-[100%] mt-4'>
-                                <Input type="email" placeholder="Email" onChange={handleChange('email')} className='w-[48%]'  />
-                                <Input type="tel" placeholder="Téléphone" onChange={handleChange('tel')} className='w-[48%]'  />
+                                <Input type="email" placeholder="Email" onChange={handleChange('email')} className='w-[48%]' />
+                                <Input type="tel" placeholder="Téléphone" onChange={handleChange('tel')} className='w-[48%]' />
                             </div>
-                            <Input type="name" placeholder="Nom d'entreprise" onChange={handleChange('nomEntreprise')} className="mt-4 w-[100%]"  />
-                            <Input type="zipCode" placeholder="Code postal" onChange={handleChange('codePostal')} className="mt-4 w-[100%]"  />
-                            <Select options={options} value={value.metierPrincipal} onChange={handleChange('metierPrincipal')} placeholder="Sélectionnez une option" className='mt-4 w-[100%]' />
+                            <Input type="text" placeholder="Nom d'entreprise" onChange={handleChange('nomEntreprise')} className="mt-4 w-[100%]" />
+                            <Input type="text" placeholder="Code postal" onChange={handleChange('codePostal')} className="mt-4 w-[100%]" />
+                            <Input type="text" placeholder="Métier principal" onChange={handleChange('metierPrincipal')} className="mt-4 w-[100%]" />
+                            {/* <Select options={options} value={value.metierPrincipal} onChange={handleChange('metierPrincipal')} placeholder="Sélectionnez une option" className='mt-4 w-[100%]' /> */}
                             <div className='flex justify-center'>
                                 <ButtonForm disabled={disabled} />
                             </div>
