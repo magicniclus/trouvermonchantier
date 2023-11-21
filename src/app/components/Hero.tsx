@@ -26,16 +26,16 @@ const Hero = () => {
 
     return (
         <section >
-            <div className='mx-auto flex max-w-7xl px-6 lg:py-32 py-20 lg:px-8 md:flex-row flex-col justify-between items-center'>
-                <div className='md:w-6/12 w-full'>
+            <div className='mx-auto flex max-w-5xl px-6 lg:pb-32 pb-20 pt-14 lg:px-8 md:flex-row flex-col justify-between items-center'>
+                <div className='md:w-5/12 w-full'>
                     <h1 className='sm:text-6xl text-5xl font-bold text-textSecondary leading-snug'>Trouver <span className="underline-yellow">vos chantiers</span></h1>
                     <p className='text-text text-xl mt-10 font-semibold'>Augmenter votre de CA mensuel de </p>
-                    <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-xl text-text font-normal'>à</span> 400 000€</h2>
+                    <h2 className='sm:text-5xl text-3xl font-bold text-textSecondary mt-2'>30 000€ <span className='text-2xl text-yellow'>à</span><br/> 400 000€</h2>
                     <p className='text-text text-xl font-semibold mt-2'>Efficace, fiable et continu</p>
                     <p className='mt-10'>Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. </p>
                 </div>
-                <div className='md:w-5/12 w-full md:mt-0 mt-12'>
-                    <form onSubmit={handleSubmit} className='sm:px-10 px-2 py-16 bg-gray rounded-md shadow-md flex flex-col items-center w-full'>
+                <div className='md:w-6/12 w-full md:mt-0 mt-12'>
+                    <form onSubmit={handleSubmit} id="form" className='sm:px-7 px-2 py-16 bg-gray rounded-md shadow-md flex flex-col items-center w-full'>
                         <h2 className='text-center text-text text-xl font-semibold'>Vous êtes professionel du bâtiment et vous recherchez de nouveaux chantiers ?</h2>
                         <p className='text-center text-xs mt-5'>Saisisez vos coordonnées et je vous contacterais afin que nous étudions votre projet</p>
                         <div className='md:w-9/12 mx-auto mt-8'>
