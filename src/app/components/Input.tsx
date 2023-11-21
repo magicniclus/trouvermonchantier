@@ -17,7 +17,6 @@ const Input: React.FC<InputProps> = ({ type = "text", placeholder = "", onChange
             setInputValue(newValue);
             onChange(newValue);
         } else if (newValue === '') {
-            // Gérer le cas où l'utilisateur efface l'entrée
             setInputValue('');
             onChange('');
         }
@@ -29,7 +28,7 @@ const Input: React.FC<InputProps> = ({ type = "text", placeholder = "", onChange
 
     return (
         <input
-            type={type} // Utiliser 'text' pour les types 'name' et 'zipCode'
+            type={type}
             value={inputValue}
             placeholder={placeholder}
             onChange={handleChange}
