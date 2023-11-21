@@ -5,19 +5,19 @@ import ButtonPhone from './ButtonAction';
 
 const cards = [
     {
-        text: "Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. ",
+        text: "Travailler avec Nicolas a été une expérience révolutionnaire pour ma stratégie de communication. Grâce à son expertise en Google Ads, nous avons pu atteindre efficacement notre public cible et développer des campagnes qui ont réellement résonné avec nos clients. Nicolas comprend l'importance de la collaboration et son approche personnalisée a permis de renforcer nos relations avec des clients communs. Sa capacité à optimiser nos campagnes et à maximiser notre budget publicitaire a été un atout majeur pour notre entreprise.",
+        stars: 5,
+        name: "Nancy M/Agence de communication",
+    },
+    {
+        text: "Nicolas CASTERA a joué un rôle crucial dans la croissance spectaculaire de Terabois. Depuis que nous avons commencé à travailler ensemble, nous avons triplé notre chiffre d'affaires, un résultat que je n'aurais jamais imaginé possible. Sa compréhension approfondie du marketing digital, combinée à une connaissance spécifique de l'industrie de l'isolation et de la couverture, a permis de mettre en place des stratégies sur-mesure qui ont réellement fonctionné. Je suis extrêmement reconnaissant pour son engagement et son expertise qui ont transformé notre entreprise",
         stars: 5,
         name: "Franck C/Terabois",
     },
     {
-        text: "Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. ",
+        text: "Collaborer avec Nicolas CASTERA a été une expérience exceptionnelle du début à la fin. Sa maîtrise du marketing digital et sa capacité à s'adapter à l'industrie des panneaux solaires ont grandement contribué au succès de notre entreprise. Nous avons vu une augmentation significative de notre clientèle et de notre visibilité sur le marché, grâce à ses stratégies innovantes et efficaces. Je suis plus que satisfait des résultats obtenus et je recommande vivement les services de Nicolas à toute entreprise cherchant à accroître sa présence en ligne.",
         stars: 5,
-        name: "Franck C/Terabois",
-    },
-    {
-        text: "Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. Trouvez vos chantier grace à des Propsects qualifiés,  des projets sur-mesure, clés en main sans engagement ni frai de service. Je suis un véritable artisan du web au service de mes clients. ",
-        stars: 5,
-        name: "Franck C/Terabois",
+        name: "Nicolas R/Panneaux solaires",
     }
 ]
 
@@ -42,7 +42,7 @@ const Temoignage = () => {
                                     <StarIcon className='h-5 w-5 text-yellow' />
                                     <StarIcon className='h-5 w-5 text-yellow' />
                                 </div>
-                                <p className='mt-4'>{card.name}</p>
+                                <p className='mt-4 text-center'>{card.name}</p>
                                  <div className='flex justify-center'>
                                 </div>
                             </div>
