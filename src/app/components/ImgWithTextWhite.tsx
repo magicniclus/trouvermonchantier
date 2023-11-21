@@ -16,7 +16,7 @@ const ImgWithTextWhite: React.FC<ImgWithTextProps> = ({
             <div className="mx-auto flex max-w-5xl p-6 lg:px-8 lg:py-32 py-20 md:flex-row flex-col justify-between items-center bg-white">
                 <div className="md:w-6/12 w-full text-text">
                     <h2 className="text-2xl font-bold">{title}</h2>
-                    <div className="mt-7">
+                    <div className="mt-7 mb-14">
                         <Ligne />
                     </div>
                     {paragraphs.map((paragraph, index) => (
