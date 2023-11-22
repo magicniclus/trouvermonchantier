@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 
 const inter = Inter({ subsets: ['latin'] });
