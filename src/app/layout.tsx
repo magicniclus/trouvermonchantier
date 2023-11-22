@@ -23,9 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="logo/favicon.png" sizes="any" />
       </head>
       <body className={inter.className}>
-        <Suspense>
           <Analytics />
-        </Suspense>
         {children}
         </body>
     </html>
