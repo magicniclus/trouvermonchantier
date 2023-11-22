@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   useEffect(() => {
     const tagManagerArgs = {
-      gtmId: 'GTM-WP9R782', // Remplacez par votre ID GTM
+      gtmId: 'GTM-NTLJ2NWF', // Remplacez par votre ID GTM
     };
     TagManager.initialize(tagManagerArgs);
   }, []);
