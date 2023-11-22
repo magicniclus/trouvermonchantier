@@ -1,30 +1,21 @@
-import type { Metadata } from 'next';
-"use client"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Suspense } from 'react'
+import Analytics from './components/Analytics'
 
-import { Inter } from 'next/font/google';
-import './globals.css';
-import React, { useRef, useEffect } from 'react';
-import TagManager from 'react-gtm-module';
-
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Trouver des Chantiers - Augmentez Votre CA | Trouver-Mon-Chantier.fr',
   description: "Boostez votre CA avec Trouver-Mon-Chantier.fr. Solutions sur-mesure pour professionnels du bâtiment. Sans engagement ni frais cachés.",
-};
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  useEffect(() => {
-    const tagManagerArgs = {
-      gtmId: 'GTM-NTLJ2NWF', // Remplacez par votre ID GTM
-    };
-    TagManager.initialize(tagManagerArgs);
-  }, []);
-
   return (
     <html lang="fr">
       <head>
@@ -32,8 +23,11 @@ export default function RootLayout({
         <link rel="icon" href="logo/favicon.png" sizes="any" />
       </head>
       <body className={inter.className}>
+        <Suspense>
+          <Analytics />
+        </Suspense>
         {children}
-      </body>
+        </body>
     </html>
-  );
+  )
 }
