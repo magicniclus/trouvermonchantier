@@ -1,14 +1,14 @@
 "use client"
 
 import React, { useRef, useEffect } from 'react';
-import NavBar from './components/NavBar'
-import Hero from './components/Hero'
-import ImgWithText from './components/ImgWithText'
-import ImgWithTextWhite from './components/ImgWithTextWhite'
-import Qui from './components/Qui'
-import Temoignage from './components/Temoignage'
-import Footer from './components/Footer'
-import ButtonFixed from './components/ButtonFixed'
+import NavBar from '../components/NavBar'
+import Hero from '../components/Hero'
+import ImgWithText from '../components/ImgWithText'
+import ImgWithTextWhite from '../components/ImgWithTextWhite'
+import Qui from '../components/Qui'
+import Temoignage from '../components/Temoignage'
+import Footer from '../components/Footer'
+import ButtonFixed from '../components/ButtonFixed'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
