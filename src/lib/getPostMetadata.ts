@@ -2,8 +2,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import { PostMetadata } from "../components/posts/PostMetadata";
 
+const path = require('path');
+
 const getPostMetadata = (): PostMetadata[] => {
-  const folder = "posts/";
+   const folder = path.join(__dirname, '..', 'posts/');
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
@@ -22,4 +24,4 @@ const getPostMetadata = (): PostMetadata[] => {
   return posts;
 };
 
-export default getPostMetadata; 
+export default getPostMetadata;
