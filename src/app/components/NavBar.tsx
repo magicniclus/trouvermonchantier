@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonPhone from './ButtonPhone';
+import { PhoneIcon } from '@heroicons/react/24/solid';
 
 const navigation = [
   { name: 'Qui suis-je ?', href: '#qui' },
@@ -23,7 +23,7 @@ const NavBar = () => {
                     ))
                     }
                 </div>
-                <ButtonPhone />
+                <PhoneIcon className='h-6 w-6 md:hidden' />
             </nav>
         </header>
     );
