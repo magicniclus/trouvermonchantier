@@ -17,7 +17,6 @@ const cards =[
     }
 ]
 
-
 const Qui: React.FC = () => {
     return (
         <section className="" id="qui">
